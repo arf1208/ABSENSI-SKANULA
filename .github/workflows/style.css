@@ -1,1 +1,74 @@
+/* --- style.css --- */
 
+/* Pengaturan umum untuk body */
+body {
+    background-color: #f4f7f6; /* Warna latar belakang lembut */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Utama */
+.main-header {
+    background-color: #006400; /* Hijau tua NU */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    max-width: 70px; /* Ukuran Logo yang lebih pas */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px; /* Sedikit sentuhan pada logo */
+    border: 2px solid #ffcc00; /* Border kuning */
+}
+
+/* Container untuk menjaga tata letak */
+.container-absensi {
+    margin-top: 50px;
+}
+
+/* Kartu Login */
+.card-login {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header-custom {
+    background-color: #ffcc00; /* Kuning/emas */
+    color: #006400; /* Teks hijau tua */
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid #006400;
+}
+
+/* Tombol */
+.btn-custom-login {
+    background-color: #006400;
+    border-color: #006400;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-login:hover {
+    background-color: #007f00; /* Hijau yang sedikit lebih terang saat di-hover */
+    border-color: #007f00;
+}
+
+/* Footer */
+footer {
+    background-color: #e9ecef;
+    margin-top: 50px;
+    padding: 15px 0;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* Pesan Error (untuk JavaScript) */
+.error-message {
+    color: #dc3545;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none; /* Sembunyikan secara default */
+}
