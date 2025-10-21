@@ -1,74 +1,136 @@
-/* --- style.css --- */
-
-/* Pengaturan umum untuk body */
 body {
-    background-color: #f4f7f6; /* Warna latar belakang lembut */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    margin: 0;
 }
 
-/* Header Utama */
-.main-header {
-    background-color: #006400; /* Hijau tua NU */
+.absensi-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 650px;
+}
+
+h1 {
+    text-align: center;
+    color: #1a237e; /* Biru gelap */
+}
+
+h3 {
+    text-align: center;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* --- Mode Selector --- */
+.mode-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mode-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    transition: all 0.3s;
+}
+
+.mode-btn.active {
+    background-color: #1a237e;
     color: white;
-    padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-logo {
-    max-width: 70px; /* Ukuran Logo yang lebih pas */
-    height: auto;
-    margin-right: 20px;
-    border-radius: 5px; /* Sedikit sentuhan pada logo */
-    border: 2px solid #ffcc00; /* Border kuning */
-}
-
-/* Container untuk menjaga tata letak */
-.container-absensi {
-    margin-top: 50px;
-}
-
-/* Kartu Login */
-.card-login {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.card-header-custom {
-    background-color: #ffcc00; /* Kuning/emas */
-    color: #006400; /* Teks hijau tua */
+    border-color: #1a237e;
     font-weight: bold;
+}
+
+/* --- Styling Scanner --- */
+#scanner-container {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#interactive.viewport {
+    width: 100%;
+    height: 350px; /* Tinggi tampilan kamera */
+}
+
+/* Kustomisasi QuaggaJS agar video mengisi container */
+#interactive.viewport > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Styling Hasil & Status --- */
+.result-section {
     text-align: center;
     padding: 15px;
-    border-bottom: 3px solid #006400;
+    margin-top: 15px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
 }
 
-/* Tombol */
-.btn-custom-login {
-    background-color: #006400;
-    border-color: #006400;
-    transition: background-color 0.3s ease;
-}
-
-.btn-custom-login:hover {
-    background-color: #007f00; /* Hijau yang sedikit lebih terang saat di-hover */
-    border-color: #007f00;
-}
-
-/* Footer */
-footer {
-    background-color: #e9ecef;
-    margin-top: 50px;
-    padding: 15px 0;
-    font-size: 0.9em;
-    color: #6c757d;
-}
-
-/* Pesan Error (untuk JavaScript) */
-.error-message {
+#barcode-result {
+    font-weight: bold;
     color: #dc3545;
-    font-size: 0.85em;
+    display: block;
+    font-size: 1.3em;
     margin-top: 5px;
-    display: none; /* Sembunyikan secara default */
+}
+
+.status-message {
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Log Absensi --- */
+.log-section {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+#attendanceTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#attendanceTable th, #attendanceTable td {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+}
+
+#attendanceTable th {
+    background-color: #e0f7fa;
+    color: #00838f;
 }
